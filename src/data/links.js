@@ -6,4 +6,8 @@ export const links = {
   whatsapp: 'https://wa.me/22897765666',
   github: 'https://github.com/GUIC-ISRA',
   linkedin: 'https://www.linkedin.com/in/edem-isra%C3%ABl-gbegnedji-b05b15351/',
+  cv: '/cv-edem-gbegnedji.pdf',
 }
+
+// Sections de la page, dans l'ordre (les clés correspondent à t.nav)
+export const sections = ['about', 'skills', 'experience', 'projects', 'contact']
