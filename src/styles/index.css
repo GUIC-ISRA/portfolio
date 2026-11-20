@@ -1,0 +1,136 @@
+@import 'tailwindcss';
+
+/* Le mode sombre est piloté par l'attribut data-theme sur <html> */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* ------------------------------------------------------------------
+   Palette « Midnight Blueprint »
+   Les couleurs sont des variables CSS, redéfinies selon le thème.
+   ------------------------------------------------------------------ */
+:root {
+  --bg: #f2f6fe;
+  --surface: #ffffff;
+  --surface-2: #e4edfd;
+  --text: #0a1020;
+  --muted: #4d5a76;
+  --line: rgb(31 94 234 / 0.14);
+  --accent: #1f5eea;
+  --accent-soft: rgb(31 94 234 / 0.12);
+  --glow: rgb(31 94 234 / 0.34);
+  --grid: rgb(31 94 234 / 0.09);
+  --badge-bg: #eaf1ff;
+  --badge-text: #1e4fc2;
+  --tint-from: #e6eefd;
+  --shadow-soft: 0 22px 50px -22px rgb(31 94 234 / 0.35);
+  --wash:
+    radial-gradient(ellipse 70% 50% at 85% 0%, rgb(31 94 234 / 0.16), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 0% 35%, rgb(59 123 255 / 0.1), transparent 70%);
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --bg: #07080c;
+  --surface: #10131a;
+  --surface-2: #161a23;
+  --text: #e8eaf0;
+  --muted: #8a91a1;
+  --line: rgb(232 234 240 / 0.08);
+  --accent: #3b7bff;
+  --accent-soft: rgb(59 123 255 / 0.12);
+  --glow: rgb(59 123 255 / 0.35);
+  --grid: rgb(232 234 240 / 0.035);
+  --badge-bg: #10131a;
+  --badge-text: #8a91a1;
+  --tint-from: #0b0d13;
+  --shadow-soft: 0 30px 60px -25px rgb(0 0 0 / 0.8);
+  --wash: radial-gradient(ellipse 60% 40% at 85% 0%, rgb(59 123 255 / 0.1), transparent 70%);
+  color-scheme: dark;
+}
+
+/* Expose les variables comme utilitaires Tailwind : bg-bg, text-muted, border-line… */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-glow: var(--glow);
+  --color-badge: var(--badge-bg);
+  --color-badge-text: var(--badge-text);
+  --shadow-soft: var(--shadow-soft);
+}
+
+@theme {
+  --font-sans: 'Inter Variable', system-ui, sans-serif;
+  --font-display: 'Space Grotesk Variable', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+}
+
+/* ------------------------------------------------------------------
+   Styles de base
+   ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-bg font-sans text-text antialiased;
+    line-height: 1.6;
+    transition:
+      background-color 0.4s,
+      color 0.4s;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Grille « blueprint » et halos d'arrière-plan */
+@utility bg-blueprint {
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 30%, transparent 80%);
+}
+
+@utility bg-wash {
+  background: var(--wash);
+}
+
+@utility bg-tint {
+  background: linear-gradient(180deg, var(--tint-from), var(--bg));
+}

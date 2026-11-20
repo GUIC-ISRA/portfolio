@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edem Israël Gbegnedji — Développeur Full Stack Web &amp; Mobile</title>
+    <meta
+      name="description"
+      content="Portfolio d'Edem Israël Gbegnedji, développeur full stack basé à Lomé (Togo). Applications web et mobiles avec Laravel, React et Flutter."
+    />
+    <meta name="author" content="Edem Israël Gbegnedji" />
+    <meta name="theme-color" content="#07080C" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F2F6FE" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph (aperçu LinkedIn / WhatsApp) — l'URL et l'image seront complétées au déploiement -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Edem Israël Gbegnedji — Développeur Full Stack Web & Mobile" />
+    <meta
+      property="og:description"
+      content="Applications web et mobiles fiables, pensées pour fonctionner même quand la connexion ne suit pas."
+    />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Applique le thème avant l'affichage pour éviter un flash de couleur -->
+    <script>
+      (function () {
+        var theme
+        try { theme = localStorage.getItem('theme') } catch (e) {}
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+        }
+        document.documentElement.dataset.theme = theme
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
