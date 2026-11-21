@@ -27,7 +27,7 @@ export const projects = [
     stack: ['React', 'Vite', 'Tailwind CSS', 'Motion'],
     // Liens renseignés à l'étape 10 (dépôt GitHub + site en ligne)
     links: [
-      { type: 'github', label: 'code', href: null },
+      { type: 'github', label: 'code', href: 'https://github.com/GUIC-ISRA/portfolio' },
       { type: 'live', label: 'live', href: null },
     ],
   },
