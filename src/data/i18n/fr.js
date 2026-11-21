@@ -34,6 +34,47 @@ const fr = {
     ctaCv: 'CV (PDF)',
     portraitAlt: 'Portrait d’Edem Israël Gbegnedji, souriant',
   },
+  about: {
+    eyebrow: 'À propos',
+    title: 'De la biologie au code',
+    paragraphs: [
+      'Je suis **Edem Israël Gbegnedji**, développeur full stack basé à Lomé. Après un premier parcours en biologie, j’ai choisi le développement logiciel et obtenu une **Licence Professionnelle en Génie Logiciel** à l’ESIG Global Success.',
+      'Lors de mon stage chez **Umbaji**, j’ai contribué au développement d’une application mobile Flutter conçue pour fonctionner hors connexion grâce à une base SQLite locale. Cette expérience m’a appris à concevoir pour des utilisateurs réels, dans des conditions réelles.',
+      'Côté web, je développe des **API REST avec Laravel** et des **interfaces avec React**. J’aime partir d’un schéma de données propre et livrer un produit simple à utiliser.',
+    ],
+    facts: [
+      { title: 'Lomé, Togo', text: 'Sur place ou à distance' },
+      { title: 'Web & Mobile', text: 'Laravel · React · Flutter' },
+      { title: 'FR · EN · Ewé', text: 'Langues' },
+    ],
+    photoAlt: 'Edem Israël Gbegnedji en costume, concentré et attentif',
+  },
+  personality: {
+    eyebrow: 'Personnalité',
+    title: 'Au-delà du code',
+    lead: 'Passionné de **développement personnel**, je considère qu’un bon développeur ne cesse jamais d’apprendre. Je cultive la curiosité, la discipline et l’envie de progresser, dans le code comme ailleurs.',
+    values: [
+      {
+        title: 'Éternel apprenant',
+        text: 'Chaque projet est l’occasion d’apprendre une technologie ou une meilleure façon de faire.',
+      },
+      {
+        title: 'Rigueur',
+        text: 'Données bien modélisées, code structuré, versions suivies : je soigne ce qui rend un produit fiable.',
+      },
+      {
+        title: 'Développement personnel',
+        text: 'Je me fixe des objectifs clairs et travaille sur moi autant que sur mes compétences techniques.',
+      },
+      {
+        title: 'Autonome et en équipe',
+        text: 'Capable d’avancer seul sur une tâche comme de collaborer efficacement au sein d’une équipe.',
+      },
+    ],
+    quote: 'Apprendre **chaque jour**, livrer avec **rigueur**.',
+    photoCaption: 'Soutenance · ESIG Global Success',
+    photoAlt: 'Edem Israël Gbegnedji en costume lors de sa soutenance de mémoire',
+  },
 }
 
 export default fr

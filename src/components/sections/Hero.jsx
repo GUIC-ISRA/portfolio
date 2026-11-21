@@ -55,7 +55,7 @@ export function Hero() {
           {h.role} — <span className="font-semibold whitespace-nowrap text-accent">{h.roleHighlight}</span>
         </motion.p>
 
-        <motion.p variants={item} className="mt-3.5 mb-5.5 max-w-[520px] text-[17px] text-muted">
+        <motion.p variants={item} className="mt-3.5 mb-5.5 max-w-130 text-[17px] text-muted">
           {h.pitch}
         </motion.p>
 
@@ -84,7 +84,7 @@ export function Hero() {
       </motion.div>
 
       <motion.div
-        className="-order-1 lg:order-none"
+        className="-order-1 lg:order-0"
         initial={{ opacity: 0, scale: 0.94 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: [0.2, 0.7, 0.2, 1], delay: 0.2 }}

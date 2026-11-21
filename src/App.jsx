@@ -1,6 +1,8 @@
 import { MotionConfig } from 'motion/react'
 import { Navbar } from './components/layout/Navbar'
 import { Hero } from './components/sections/Hero'
+import { About } from './components/sections/About'
+import { Personality } from './components/sections/Personality'
 
 export default function App() {
   return (
@@ -13,6 +15,8 @@ export default function App() {
         <Navbar />
         <main id="main">
           <Hero />
+          <About />
+          <Personality />
         </main>
       </div>
     </MotionConfig>
