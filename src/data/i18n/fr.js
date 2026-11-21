@@ -174,6 +174,44 @@ const fr = {
       },
     ],
   },
+  contact: {
+    eyebrow: 'Contact',
+    title: 'Travaillons ensemble',
+    intro:
+      'Un poste, une mission freelance ou simplement une question ? Écrivez-moi, je vous réponds rapidement.',
+    channels: {
+      email: 'E-mail',
+      phone: 'Téléphone',
+      whatsapp: 'WhatsApp',
+      linkedin: 'LinkedIn',
+      github: 'GitHub',
+    },
+    whatsappText: 'Écrire un message',
+    linkedinText: 'Voir mon profil',
+    githubText: 'Voir mes dépôts',
+    copy: 'Copier l’adresse e-mail',
+    copied: 'Adresse copiée',
+    form: {
+      title: 'Envoyer un message',
+      name: 'Nom',
+      namePlaceholder: 'Votre nom',
+      email: 'E-mail',
+      emailPlaceholder: 'vous@exemple.com',
+      message: 'Message',
+      messagePlaceholder: 'Parlez-moi de votre projet ou de votre offre…',
+      submit: 'Envoyer le message',
+      sending: 'Envoi en cours…',
+      success: 'Merci ! Votre message a bien été envoyé. Je vous réponds rapidement.',
+      error: 'L’envoi a échoué. Réessayez ou écrivez-moi directement par e-mail.',
+      subject: 'Nouveau message depuis le portfolio',
+    },
+  },
+  footer: {
+    tagline: 'Développeur Full Stack — Web & Mobile, basé à Lomé.',
+    builtWith: 'Conçu et développé avec React, Tailwind CSS et Motion.',
+    rights: 'Tous droits réservés.',
+    backToTop: 'Retour en haut',
+  },
 }
 
 export default fr

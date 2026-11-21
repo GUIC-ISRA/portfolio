@@ -173,6 +173,43 @@ const en = {
       },
     ],
   },
+  contact: {
+    eyebrow: 'Contact',
+    title: 'Let’s work together',
+    intro: 'A job opening, a freelance project or just a question? Write to me and I’ll get back to you quickly.',
+    channels: {
+      email: 'Email',
+      phone: 'Phone',
+      whatsapp: 'WhatsApp',
+      linkedin: 'LinkedIn',
+      github: 'GitHub',
+    },
+    whatsappText: 'Send a message',
+    linkedinText: 'View my profile',
+    githubText: 'View my repositories',
+    copy: 'Copy email address',
+    copied: 'Address copied',
+    form: {
+      title: 'Send a message',
+      name: 'Name',
+      namePlaceholder: 'Your name',
+      email: 'Email',
+      emailPlaceholder: 'you@example.com',
+      message: 'Message',
+      messagePlaceholder: 'Tell me about your project or job offer…',
+      submit: 'Send message',
+      sending: 'Sending…',
+      success: 'Thank you! Your message has been sent. I’ll get back to you soon.',
+      error: 'Sending failed. Please try again or email me directly.',
+      subject: 'New message from the portfolio',
+    },
+  },
+  footer: {
+    tagline: 'Full Stack Developer — Web & Mobile, based in Lomé.',
+    builtWith: 'Designed and built with React, Tailwind CSS and Motion.',
+    rights: 'All rights reserved.',
+    backToTop: 'Back to top',
+  },
 }
 
 export default en

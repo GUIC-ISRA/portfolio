@@ -17,7 +17,7 @@ export const projects = [
   },
   {
     key: 'students',
-    stack: ['Laravel', 'PHP', 'CRUD'],
+    stack: ['Laravel', 'PHP', 'MySQL', 'CRUD'],
     links: [
       { type: 'github', label: 'code', href: 'https://github.com/GUIC-ISRA/Gestion_Etudiant_Formation_Laravel' },
     ],
