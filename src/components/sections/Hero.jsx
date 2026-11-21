@@ -5,14 +5,22 @@ import { links } from '../../data/links'
 import { Badge } from '../ui/Badge'
 import { ButtonLink } from '../ui/Button'
 import { Portrait3D } from '../ui/Portrait3D'
-import heroImg from '../../assets/images/hero.webp'
+import hero1100 from '../../assets/images/hero-cutout-1100.webp'
+import hero700 from '../../assets/images/hero-cutout-700.webp'
+
+const heroImage = {
+  src: hero1100,
+  srcSet: `${hero700} 700w, ${hero1100} 1100w`,
+  width: 1100,
+  height: 1330,
+}
 
 const stack = ['Laravel', 'React', 'Flutter', 'MySQL', 'SQLite']
 
 const floats = [
-  { icon: Smartphone, label: 'Flutter', className: 'top-[12%] -left-[6%] sm:-left-[14%]', z: 70 },
-  { icon: WifiOff, label: 'Offline-first', className: 'top-[48%] -right-[6%] sm:-right-[12%]', z: 90 },
-  { icon: CodeXml, label: 'Laravel · React', className: 'bottom-[9%] -left-[2%] sm:-left-[8%]', z: 55 },
+  { icon: Smartphone, label: 'Flutter', className: 'top-[22%] -left-[6%] sm:-left-[14%]', z: 70 },
+  { icon: WifiOff, label: 'Offline-first', className: 'top-[52%] -right-[6%] sm:-right-[12%]', z: 90 },
+  { icon: CodeXml, label: 'Laravel · React', className: 'bottom-[8%] -left-[2%] sm:-left-[8%]', z: 55 },
 ]
 
 // Apparition en cascade des éléments du texte
@@ -89,7 +97,7 @@ export function Hero() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: [0.2, 0.7, 0.2, 1], delay: 0.2 }}
       >
-        <Portrait3D src={heroImg} alt={h.portraitAlt} width={900} height={1089} floats={floats} />
+        <Portrait3D image={heroImage} alt={h.portraitAlt} floats={floats} />
       </motion.div>
 
       <a
