@@ -2,6 +2,8 @@
 
 Portfolio personnel de développeur full stack (web & mobile).
 
+🌐 **En ligne : [edem-gbegnedji.vercel.app](https://edem-gbegnedji.vercel.app)**
+
 ## Stack
 
 - [React](https://react.dev) + [Vite](https://vite.dev)
