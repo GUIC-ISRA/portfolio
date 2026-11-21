@@ -59,7 +59,7 @@ export function Portrait3D({ image, alt, floats = [] }) {
         <m.div
           aria-hidden
           style={{ z: -80 }}
-          className="absolute inset-[-20%] bg-[radial-gradient(circle_at_50%_40%,var(--glow),transparent_62%)] blur-[30px]"
+          className="absolute inset-[-20%] bg-[radial-gradient(circle_at_50%_40%,var(--glow),transparent_62%)]"
         />
 
         {/* Cadre « blueprint » */}
@@ -86,7 +86,7 @@ export function Portrait3D({ image, alt, floats = [] }) {
               height={image.height}
               fetchPriority="high"
               decoding="async"
-              className="absolute inset-0 size-full object-contain object-bottom drop-shadow-[0_0_28px_var(--glow)]"
+              className="absolute inset-0 size-full object-contain object-bottom lg:drop-shadow-[0_0_28px_var(--glow)]"
             />
           </div>
         </m.div>
