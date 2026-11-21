@@ -1,10 +1,11 @@
 import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'motion/react'
+import { m, useScroll, useTransform } from 'motion/react'
 import { useLanguage } from '../../context/language'
 import { SectionHeader } from '../ui/SectionHeader'
 import { Reveal } from '../ui/Reveal'
 import { RichText } from '../ui/RichText'
 import aboutImg from '../../assets/images/about.webp'
+import aboutImgSmall from '../../assets/images/about-560.webp'
 
 export function About() {
   const { t } = useLanguage()
@@ -26,8 +27,10 @@ export function About() {
               ref={photoRef}
               className="relative mx-auto max-w-md overflow-hidden rounded-3xl border border-line shadow-soft lg:max-w-none"
             >
-              <motion.img
+              <m.img
                 src={aboutImg}
+                srcSet={`${aboutImgSmall} 560w, ${aboutImg} 900w`}
+                sizes="(min-width: 1024px) 420px, (min-width: 640px) 448px, 92vw"
                 alt={a.photoAlt}
                 width={900}
                 height={917}

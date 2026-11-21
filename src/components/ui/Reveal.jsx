@@ -1,8 +1,8 @@
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 
 /** Fait apparaître son contenu en douceur quand il entre dans l'écran (une seule fois). */
 export function Reveal({ children, delay = 0, className = '', as = 'div' }) {
-  const Component = motion[as]
+  const Component = m[as]
   return (
     <Component
       initial={{ opacity: 0, y: 24 }}

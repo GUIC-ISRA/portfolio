@@ -1,12 +1,13 @@
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import { ArrowRight, ChevronDown, CodeXml, Download, Mail, Smartphone, WifiOff } from 'lucide-react'
 import { useLanguage } from '../../context/language'
 import { links } from '../../data/links'
 import { Badge } from '../ui/Badge'
 import { ButtonLink } from '../ui/Button'
 import { Portrait3D } from '../ui/Portrait3D'
-import hero1100 from '../../assets/images/hero-cutout-1100.webp'
-import hero700 from '../../assets/images/hero-cutout-700.webp'
+// Images dans public/ (noms fixes) pour pouvoir les précharger depuis index.html
+const hero1100 = '/images/hero-cutout-1100.webp'
+const hero700 = '/images/hero-cutout-700.webp'
 
 const heroImage = {
   src: hero1100,
@@ -39,8 +40,8 @@ export function Hero() {
       id="accueil"
       className="relative mx-auto grid max-w-6xl items-center gap-11 px-4 pt-10 pb-20 sm:px-6 lg:min-h-[calc(100svh-4.25rem)] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:pt-12"
     >
-      <motion.div variants={container} initial="hidden" animate="show">
-        <motion.p
+      <m.div variants={container} initial="hidden" animate="show">
+        <m.p
           variants={item}
           className="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface py-1.5 pr-3.5 pl-2.5 text-[13px] text-muted"
         >
@@ -50,32 +51,32 @@ export function Hero() {
           </span>
           <span className="hidden sm:inline">{h.status}</span>
           <span className="sm:hidden">{h.statusShort}</span>
-        </motion.p>
+        </m.p>
 
-        <motion.h1 variants={item} className="mt-6 mb-4.5 text-[clamp(2.75rem,6.4vw,5.1rem)] font-bold">
+        <m.h1 variants={item} className="mt-6 mb-4.5 text-[clamp(2.75rem,6.4vw,5.1rem)] font-bold">
           {h.firstName}{' '}
           <span className="block bg-[linear-gradient(100deg,var(--text)_30%,var(--accent))] bg-clip-text text-transparent">
             {h.lastName}
           </span>
-        </motion.h1>
+        </m.h1>
 
-        <motion.p variants={item} className="font-display text-[clamp(1.25rem,2.2vw,1.625rem)] font-medium">
+        <m.p variants={item} className="font-display text-[clamp(1.25rem,2.2vw,1.625rem)] font-medium">
           {h.role} — <span className="font-semibold whitespace-nowrap text-accent">{h.roleHighlight}</span>
-        </motion.p>
+        </m.p>
 
-        <motion.p variants={item} className="mt-3.5 mb-5.5 max-w-130 text-[17px] text-muted">
+        <m.p variants={item} className="mt-3.5 mb-5.5 max-w-130 text-[17px] text-muted">
           {h.pitch}
-        </motion.p>
+        </m.p>
 
-        <motion.ul variants={item} className="mb-8.5 flex flex-wrap gap-2" aria-label="Stack">
+        <m.ul variants={item} className="mb-8.5 flex flex-wrap gap-2" aria-label="Stack">
           {stack.map((tech) => (
             <li key={tech}>
               <Badge>{tech}</Badge>
             </li>
           ))}
-        </motion.ul>
+        </m.ul>
 
-        <motion.div variants={item} className="flex flex-wrap items-center gap-3">
+        <m.div variants={item} className="flex flex-wrap items-center gap-3">
           <ButtonLink href="#projects">
             {h.ctaProjects}
             <ArrowRight size={17} aria-hidden />
@@ -88,17 +89,17 @@ export function Hero() {
             <Download size={17} aria-hidden />
             {h.ctaCv}
           </ButtonLink>
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
 
-      <motion.div
+      <m.div
         className="-order-1 lg:order-0"
         initial={{ opacity: 0, scale: 0.94 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: [0.2, 0.7, 0.2, 1], delay: 0.2 }}
       >
         <Portrait3D image={heroImage} alt={h.portraitAlt} floats={floats} />
-      </motion.div>
+      </m.div>
 
       <a
         href="#about"

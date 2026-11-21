@@ -12,6 +12,17 @@
     <meta name="theme-color" content="#07080C" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#F2F6FE" media="(prefers-color-scheme: light)" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- Précharge le portrait de l'accueil (élément principal de la page) -->
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="/images/hero-cutout-1100.webp"
+      imagesrcset="/images/hero-cutout-700.webp 700w, /images/hero-cutout-1100.webp 1100w"
+      imagesizes="(min-width: 1024px) 430px, 80vw"
+      fetchpriority="high"
+    />
 
     <!-- Open Graph (aperçu LinkedIn / WhatsApp) — l'URL et l'image seront complétées au déploiement -->
     <meta property="og:type" content="website" />
@@ -22,6 +33,25 @@
     />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Données structurées : aide Google à comprendre qui est la personne présentée -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Edem Israël Gbegnedji",
+        "jobTitle": "Développeur Full Stack Web & Mobile",
+        "email": "mailto:israelgbegnedji@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Lomé", "addressCountry": "TG" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "ESIG Global Success" },
+        "knowsAbout": ["Laravel", "React", "Flutter", "PHP", "JavaScript", "MySQL", "SQLite", "API REST"],
+        "knowsLanguage": ["fr", "en", "ee"],
+        "sameAs": [
+          "https://github.com/GUIC-ISRA",
+          "https://www.linkedin.com/in/edem-isra%C3%ABl-gbegnedji-b05b15351/"
+        ]
+      }
+    </script>
 
     <!-- Applique le thème avant l'affichage pour éviter un flash de couleur -->
     <script>

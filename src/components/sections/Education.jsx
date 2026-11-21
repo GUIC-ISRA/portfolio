@@ -29,7 +29,7 @@ export function Education() {
                 <span
                   className={`absolute top-0 -left-5 grid size-10 place-items-center rounded-xl border ${
                     isFirst
-                      ? 'border-transparent bg-accent text-white shadow-[0_8px_24px_-8px_var(--glow)]'
+                      ? 'border-transparent bg-accent-strong text-white shadow-[0_8px_24px_-8px_var(--glow)]'
                       : 'border-line bg-surface text-accent'
                   }`}
                 >

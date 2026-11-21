@@ -4,6 +4,7 @@ import { SectionHeader } from '../ui/SectionHeader'
 import { Reveal } from '../ui/Reveal'
 import { Badge } from '../ui/Badge'
 import experienceImg from '../../assets/images/experience.webp'
+import experienceImgSmall from '../../assets/images/experience-640.webp'
 
 export function Experience() {
   const { t } = useLanguage()
@@ -69,6 +70,8 @@ export function Experience() {
           <Reveal delay={0.1} className="overflow-hidden rounded-3xl border border-line shadow-soft">
             <img
               src={experienceImg}
+              srcSet={`${experienceImgSmall} 640w, ${experienceImg} 1100w`}
+              sizes="(min-width: 1024px) 460px, 92vw"
               alt={e.photoAlt}
               width={1100}
               height={782}

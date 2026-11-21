@@ -40,7 +40,7 @@ export function Contact() {
 
             {/* E-mail mis en avant, avec bouton de copie */}
             <div className="mb-4 flex items-center gap-3 rounded-2xl border border-line bg-surface p-4">
-              <span className="grid size-11 flex-none place-items-center rounded-xl bg-accent text-white">
+              <span className="grid size-11 flex-none place-items-center rounded-xl bg-accent-strong text-white">
                 <Mail size={20} aria-hidden />
               </span>
               <div className="min-w-0 flex-1">

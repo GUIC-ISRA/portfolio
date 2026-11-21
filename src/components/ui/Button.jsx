@@ -3,7 +3,7 @@ const base =
 
 const variants = {
   primary:
-    'border-transparent bg-accent text-white shadow-[0_10px_30px_-10px_var(--glow)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-12px_var(--glow)]',
+    'border-transparent bg-accent-strong text-white shadow-[0_10px_30px_-10px_var(--glow)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-12px_var(--glow)]',
   ghost: 'border-line bg-surface text-text hover:-translate-y-0.5 hover:border-accent',
   link: 'border-transparent px-2 text-muted hover:text-text',
 }

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import {
-  motion,
+  m,
   useMotionTemplate,
   useMotionValue,
   useReducedMotion,
@@ -51,12 +51,12 @@ export function Portrait3D({ image, alt, floats = [] }) {
   return (
     // Marge haute pour laisser la place à la tête qui dépasse du cadre
     <div className="grid place-items-center pt-[14%] [perspective:1200px]">
-      <motion.div
+      <m.div
         style={{ rotateX, rotateY, transformStyle: 'preserve-3d', aspectRatio: `1 / ${FRAME_RATIO}` }}
         className="relative w-[min(330px,80vw)] lg:w-[min(430px,100%)]"
       >
         {/* Halo lumineux, loin derrière */}
-        <motion.div
+        <m.div
           aria-hidden
           style={{ z: -80 }}
           className="absolute -inset-[20%] bg-[radial-gradient(circle_at_50%_40%,var(--glow),transparent_62%)] blur-[30px]"
@@ -74,7 +74,7 @@ export function Portrait3D({ image, alt, floats = [] }) {
         </div>
 
         {/* Silhouette détourée : rognée en bas et sur les côtés, libre en haut */}
-        <motion.div style={{ z: 40 }} className="absolute inset-x-0 bottom-0 overflow-hidden rounded-b-[28px]">
+        <m.div style={{ z: 40 }} className="absolute inset-x-0 bottom-0 overflow-hidden rounded-b-[28px]">
           {/* Boîte au ratio de l'image : elle dépasse au-dessus du cadre, la tête n'est donc pas rognée */}
           <div className="relative" style={{ height: 0, paddingBottom: `${imageHeightPct * FRAME_RATIO}%` }}>
             <img
@@ -89,37 +89,37 @@ export function Portrait3D({ image, alt, floats = [] }) {
               className="absolute inset-0 size-full object-contain object-bottom drop-shadow-[0_0_28px_var(--glow)]"
             />
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Reflet de lumière qui suit le curseur */}
-        <motion.div
+        <m.div
           aria-hidden
           style={{ background: shine, z: 41 }}
           className="pointer-events-none absolute inset-0 rounded-[28px] mix-blend-soft-light"
         />
 
         {/* Repères d'angle façon plan d'architecte */}
-        <motion.div aria-hidden style={{ z: 20 }} className="pointer-events-none absolute -inset-3.5">
+        <m.div aria-hidden style={{ z: 20 }} className="pointer-events-none absolute -inset-3.5">
           <i className="absolute top-0 left-0 size-5.5 rounded-tl-md border-t-2 border-l-2 border-accent/80" />
           <i className="absolute top-0 right-0 size-5.5 rounded-tr-md border-t-2 border-r-2 border-accent/80" />
           <i className="absolute bottom-0 left-0 size-5.5 rounded-bl-md border-b-2 border-l-2 border-accent/80" />
           <i className="absolute right-0 bottom-0 size-5.5 rounded-br-md border-r-2 border-b-2 border-accent/80" />
-        </motion.div>
+        </m.div>
 
         {/* Badges flottants */}
+        {/* Badges flottants : profondeur gérée par Motion, flottement en CSS (GPU) */}
         {floats.map(({ icon: Icon, label, className, z }, i) => (
-          <motion.div
-            key={label}
-            style={{ z }}
-            animate={reduce ? undefined : { y: [0, -6, 0] }}
-            transition={{ duration: 5 + i, repeat: Infinity, ease: 'easeInOut', delay: i * 0.6 }}
-            className={`absolute flex items-center gap-2 rounded-xl border border-line bg-surface/85 px-3 py-2 font-mono text-xs font-medium whitespace-nowrap shadow-soft backdrop-blur-md ${className}`}
-          >
-            <Icon size={15} className="text-accent" aria-hidden />
-            {label}
-          </motion.div>
+          <m.div key={label} style={{ z }} className={`absolute ${className}`}>
+            <div
+              style={{ animationDuration: `${5 + i}s`, animationDelay: `${i * 0.6}s` }}
+              className="flex animate-float items-center gap-2 rounded-xl border border-line bg-surface/95 px-3 py-2 font-mono text-xs font-medium whitespace-nowrap shadow-soft motion-reduce:animate-none"
+            >
+              <Icon size={15} className="text-accent" aria-hidden />
+              {label}
+            </div>
+          </m.div>
         ))}
-      </motion.div>
+      </m.div>
     </div>
   )
 }

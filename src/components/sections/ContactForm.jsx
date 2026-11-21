@@ -111,7 +111,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="mt-5 inline-flex h-12 w-full cursor-pointer items-center justify-center gap-2.5 rounded-xl bg-accent px-5.5 text-[15px] font-semibold text-white shadow-[0_10px_30px_-10px_var(--glow)] transition hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-70 sm:w-auto"
+        className="mt-5 inline-flex h-12 w-full cursor-pointer items-center justify-center gap-2.5 rounded-xl bg-accent-strong px-5.5 text-[15px] font-semibold text-white shadow-[0_10px_30px_-10px_var(--glow)] transition hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-70 sm:w-auto"
       >
         {status === 'sending' ? (
           <>

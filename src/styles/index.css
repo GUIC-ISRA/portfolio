@@ -15,6 +15,7 @@
   --muted: #4d5a76;
   --line: rgb(31 94 234 / 0.14);
   --accent: #1f5eea;
+  --accent-strong: #1f5eea;
   --accent-soft: rgb(31 94 234 / 0.12);
   --glow: rgb(31 94 234 / 0.34);
   --grid: rgb(31 94 234 / 0.09);
@@ -36,6 +37,7 @@
   --muted: #8a91a1;
   --line: rgb(232 234 240 / 0.08);
   --accent: #3b7bff;
+  --accent-strong: #2563eb;
   --accent-soft: rgb(59 123 255 / 0.12);
   --glow: rgb(59 123 255 / 0.35);
   --grid: rgb(232 234 240 / 0.035);
@@ -56,6 +58,7 @@
   --color-muted: var(--muted);
   --color-line: var(--line);
   --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
   --color-accent-soft: var(--accent-soft);
   --color-glow: var(--glow);
   --color-badge: var(--badge-bg);
@@ -95,7 +98,7 @@
   }
 
   ::selection {
-    background: var(--accent);
+    background: var(--accent-strong);
     color: #fff;
   }
 
@@ -133,4 +136,19 @@
 
 @utility bg-tint {
   background: linear-gradient(180deg, var(--tint-from), var(--bg));
+}
+
+/* Flottement doux des badges du portrait (animé par le GPU, sans JavaScript) */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@utility animate-float {
+  animation: float 5s ease-in-out infinite;
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { AnimatePresence, motion } from 'motion/react'
+import { AnimatePresence, m } from 'motion/react'
 import { Menu, X } from 'lucide-react'
 import { useLanguage } from '../../context/language'
 import { useActiveSection } from '../../hooks/useActiveSection'
@@ -49,14 +49,15 @@ export function Navbar() {
     >
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-white"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:rounded-lg focus:bg-accent-strong focus:px-4 focus:py-2 focus:text-white"
       >
         {t.ui.skipToContent}
       </a>
 
       <nav className="mx-auto flex h-17 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <a href="#accueil" className="font-display text-xl font-bold" aria-label={t.ui.home}>
+        <a href="#accueil" className="font-display text-xl font-bold">
           EIG<span className="text-accent">.</span>
+          <span className="sr-only"> — {t.ui.home}</span>
         </a>
 
         <ul className="hidden items-center gap-7 text-sm md:flex">
@@ -70,12 +71,13 @@ export function Navbar() {
                 }`}
               >
                 {t.nav[id]}
-                {active === id && (
-                  <motion.span
-                    layoutId="nav-underline"
-                    className="absolute inset-x-0 -bottom-1.5 h-0.5 rounded-full bg-accent"
-                  />
-                )}
+                {/* Soulignement : se déploie depuis le centre quand la section est active */}
+                <span
+                  aria-hidden
+                  className={`absolute inset-x-0 -bottom-1.5 h-0.5 origin-center rounded-full bg-accent transition-transform duration-300 ${
+                    active === id ? 'scale-x-100' : 'scale-x-0'
+                  }`}
+                />
               </a>
             </li>
           ))}
@@ -99,7 +101,7 @@ export function Navbar() {
 
       <AnimatePresence>
         {open && (
-          <motion.div
+          <m.div
             id="mobile-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
@@ -109,7 +111,7 @@ export function Navbar() {
           >
             <ul className="flex h-[calc(100dvh-4.25rem)] flex-col gap-1 px-4 pt-6 pb-10">
               {sections.map((id, i) => (
-                <motion.li
+                <m.li
                   key={id}
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -125,10 +127,10 @@ export function Navbar() {
                     <span className="font-mono text-xs font-normal text-muted">0{i + 1}</span>
                     {t.nav[id]}
                   </a>
-                </motion.li>
+                </m.li>
               ))}
             </ul>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </header>
