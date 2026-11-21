@@ -50,7 +50,7 @@ export function Portrait3D({ image, alt, floats = [] }) {
 
   return (
     // Marge haute pour laisser la place à la tête qui dépasse du cadre
-    <div className="grid place-items-center pt-[14%] [perspective:1200px]">
+    <div className="grid place-items-center pt-[14%] perspective-distant">
       <m.div
         style={{ rotateX, rotateY, transformStyle: 'preserve-3d', aspectRatio: `1 / ${FRAME_RATIO}` }}
         className="relative w-[min(330px,80vw)] lg:w-[min(430px,100%)]"
@@ -59,7 +59,7 @@ export function Portrait3D({ image, alt, floats = [] }) {
         <m.div
           aria-hidden
           style={{ z: -80 }}
-          className="absolute -inset-[20%] bg-[radial-gradient(circle_at_50%_40%,var(--glow),transparent_62%)] blur-[30px]"
+          className="absolute inset-[-20%] bg-[radial-gradient(circle_at_50%_40%,var(--glow),transparent_62%)] blur-[30px]"
         />
 
         {/* Cadre « blueprint » */}
