@@ -39,7 +39,7 @@ const fr = {
     title: 'De la biologie au code',
     paragraphs: [
       'Je suis **Edem Israël Gbegnedji**, développeur full stack basé à Lomé. Après un premier parcours en biologie, j’ai choisi le développement logiciel et obtenu une **Licence Professionnelle en Génie Logiciel** à l’ESIG Global Success.',
-      'Lors de mon stage chez **Umbaji**, j’ai contribué au développement d’une application mobile Flutter conçue pour fonctionner hors connexion grâce à une base SQLite locale. Cette expérience m’a appris à concevoir pour des utilisateurs réels, dans des conditions réelles.',
+      'Lors de mon stage chez **Umbaji**, j’ai contribué au développement d’une **application mobile de collecte de données** en Flutter, conçue pour fonctionner hors connexion grâce à une base SQLite locale. Cette expérience m’a appris à concevoir pour des utilisateurs réels, dans des conditions réelles.',
       'Côté web, je développe des **API REST avec Laravel** et des **interfaces avec React**. J’aime partir d’un schéma de données propre et livrer un produit simple à utiliser.',
     ],
     facts: [
@@ -74,6 +74,44 @@ const fr = {
     quote: 'Apprendre **chaque jour**, livrer avec **rigueur**.',
     photoCaption: 'Soutenance · ESIG Global Success',
     photoAlt: 'Edem Israël Gbegnedji en costume lors de sa soutenance de mémoire',
+  },
+  skills: {
+    eyebrow: 'Compétences',
+    title: 'Ma boîte à outils',
+    categories: [
+      { key: 'mobile', title: 'Mobile', items: ['Flutter', 'iOS / Android', 'SQLite', 'Offline-first', 'Persistance locale'] },
+      { key: 'frontend', title: 'Frontend', items: ['React', 'JavaScript', 'HTML5 / CSS3', 'Responsive design'] },
+      { key: 'backend', title: 'Backend', items: ['PHP', 'Laravel', 'API REST', 'Architecture MVC', 'CRUD'] },
+      { key: 'data', title: 'Données & conception', items: ['MySQL', 'SQL', 'SQLite', 'Merise', 'UML'] },
+      { key: 'tools', title: 'Outils & méthodes', items: ['Git', 'GitHub', 'VS Code', 'XAMPP', 'Gestion de versions'] },
+    ],
+    notions: {
+      title: 'Notions',
+      text: 'Domaines que j’explore et continue d’approfondir.',
+      items: ['Sécurité informatique', 'Intégration d’outils d’IA', 'ERP', 'Architecture logicielle'],
+    },
+  },
+  experience: {
+    eyebrow: 'Expérience',
+    title: 'Expérience professionnelle',
+    jobs: [
+      {
+        role: 'Stagiaire Développeur Mobile',
+        company: 'Umbaji SARL',
+        location: 'Lomé, Togo',
+        period: '2026',
+        summary: 'Développement d’une application mobile de collecte de données, multiplateforme et utilisable hors connexion.',
+        tasks: [
+          'Développement et optimisation de fonctionnalités Flutter pour iOS et Android',
+          'Base de données SQLite locale assurant la persistance des données et l’usage hors connexion',
+          'Intégration des API REST existantes pour échanger les données entre l’application et le back-end',
+          'Maintenance corrective et résolution d’incidents pour des fonctionnalités plus stables',
+          'Versionnement du code avec Git pour des livraisons traçables',
+        ],
+        stack: ['Flutter', 'SQLite', 'API REST', 'Git'],
+      },
+    ],
+    photoAlt: 'Edem Israël Gbegnedji en costume, présentant son travail devant un ordinateur portable',
   },
 }
 

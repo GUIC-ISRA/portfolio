@@ -39,7 +39,7 @@ const en = {
     title: 'From biology to code',
     paragraphs: [
       'I’m **Edem Israël Gbegnedji**, a full stack developer based in Lomé, Togo. After starting out in biology, I chose software development and completed a **Professional Bachelor’s degree in Software Engineering** at ESIG Global Success.',
-      'During my internship at **Umbaji**, I helped build a Flutter mobile app designed to work offline thanks to a local SQLite database. It taught me to design for real users, in real-world conditions.',
+      'During my internship at **Umbaji**, I helped build a **mobile data collection app** with Flutter, designed to work offline thanks to a local SQLite database. It taught me to design for real users, in real-world conditions.',
       'On the web side, I build **REST APIs with Laravel** and **interfaces with React**. I like to start from a clean data model and ship a product that is simple to use.',
     ],
     facts: [
@@ -74,6 +74,44 @@ const en = {
     quote: 'Learn **every day**, deliver with **rigor**.',
     photoCaption: 'Thesis defense · ESIG Global Success',
     photoAlt: 'Edem Israël Gbegnedji in a suit during the thesis defense',
+  },
+  skills: {
+    eyebrow: 'Skills',
+    title: 'My toolbox',
+    categories: [
+      { key: 'mobile', title: 'Mobile', items: ['Flutter', 'iOS / Android', 'SQLite', 'Offline-first', 'Local persistence'] },
+      { key: 'frontend', title: 'Frontend', items: ['React', 'JavaScript', 'HTML5 / CSS3', 'Responsive design'] },
+      { key: 'backend', title: 'Backend', items: ['PHP', 'Laravel', 'REST API', 'MVC architecture', 'CRUD'] },
+      { key: 'data', title: 'Data & design', items: ['MySQL', 'SQL', 'SQLite', 'Merise', 'UML'] },
+      { key: 'tools', title: 'Tools & methods', items: ['Git', 'GitHub', 'VS Code', 'XAMPP', 'Version control'] },
+    ],
+    notions: {
+      title: 'Familiar with',
+      text: 'Areas I am exploring and keep deepening.',
+      items: ['Cybersecurity', 'AI tools integration', 'ERP', 'Software architecture'],
+    },
+  },
+  experience: {
+    eyebrow: 'Experience',
+    title: 'Work experience',
+    jobs: [
+      {
+        role: 'Mobile Developer Intern',
+        company: 'Umbaji SARL',
+        location: 'Lomé, Togo',
+        period: '2026',
+        summary: 'Built a cross-platform mobile data collection app that works offline.',
+        tasks: [
+          'Developed and optimized Flutter features for iOS and Android',
+          'Local SQLite database for data persistence and offline use',
+          'Integrated existing REST APIs to exchange data between the app and the back-end',
+          'Corrective maintenance and incident resolution for more stable features',
+          'Code versioning with Git for traceable releases',
+        ],
+        stack: ['Flutter', 'SQLite', 'REST API', 'Git'],
+      },
+    ],
+    photoAlt: 'Edem Israël Gbegnedji in a suit, presenting work in front of a laptop',
   },
 }
 
