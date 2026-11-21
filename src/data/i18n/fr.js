@@ -113,6 +113,67 @@ const fr = {
     ],
     photoAlt: 'Edem Israël Gbegnedji en costume, présentant son travail devant un ordinateur portable',
   },
+  projects: {
+    eyebrow: 'Projets',
+    title: 'Projets sélectionnés',
+    linkLabels: { api: 'API', frontend: 'Interface', code: 'Code source', live: 'Voir le site' },
+    items: {
+      employees: {
+        tag: 'Full stack',
+        title: 'Gestion des employés',
+        description:
+          'Application full stack : une API REST développée avec Laravel et une interface React pour afficher, ajouter, modifier et supprimer les employés d’une entreprise.',
+      },
+      qr: {
+        tag: 'Outil',
+        title: 'Générateur de QR codes de fidélité',
+        description:
+          'Application PHP qui génère des QR codes destinés aux clients fidèles d’une entreprise.',
+      },
+      students: {
+        tag: 'Laravel',
+        title: 'Gestion des étudiants',
+        description:
+          'Application Laravel de gestion des étudiants (nom, prénom, filière) avec les opérations CRUD complètes, réalisée pour consolider les bases du framework.',
+      },
+      portfolio: {
+        tag: 'Front-end',
+        title: 'Ce portfolio',
+        description:
+          'Site personnel conçu et développé de A à Z : thème clair et sombre, version bilingue, portrait 3D animé et attention portée à l’accessibilité.',
+      },
+    },
+  },
+  education: {
+    eyebrow: 'Formation',
+    title: 'Parcours académique',
+    items: [
+      {
+        key: 'licence',
+        degree: 'Licence Professionnelle en Génie Logiciel',
+        school: 'ESIG Global Success',
+        location: 'Lomé, Togo',
+        period: '2023 – 2026',
+        text: 'Formation orientée développement d’applications, conclue par un stage chez Umbaji et la soutenance de mon mémoire.',
+      },
+      {
+        key: 'biology',
+        degree: 'Parcours universitaire en Biologie & Physiologie Animale',
+        school: 'Université de Lomé',
+        location: 'Lomé, Togo',
+        period: '2020',
+        text: 'Une première formation scientifique qui m’a apporté rigueur et esprit d’analyse.',
+      },
+      {
+        key: 'bac',
+        degree: 'Baccalauréat série D',
+        school: 'Lycée DINO-GOLO',
+        location: 'Togo',
+        period: '2019',
+        text: null,
+      },
+    ],
+  },
 }
 
 export default fr

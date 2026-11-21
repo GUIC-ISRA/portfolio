@@ -113,6 +113,66 @@ const en = {
     ],
     photoAlt: 'Edem Israël Gbegnedji in a suit, presenting work in front of a laptop',
   },
+  projects: {
+    eyebrow: 'Projects',
+    title: 'Selected projects',
+    linkLabels: { api: 'API', frontend: 'Interface', code: 'Source code', live: 'Live site' },
+    items: {
+      employees: {
+        tag: 'Full stack',
+        title: 'Employee management',
+        description:
+          'Full stack app: a REST API built with Laravel and a React interface to list, add, edit and delete a company’s employees.',
+      },
+      qr: {
+        tag: 'Tool',
+        title: 'Loyalty QR code generator',
+        description: 'A PHP application that generates QR codes for a company’s loyal customers.',
+      },
+      students: {
+        tag: 'Laravel',
+        title: 'Student management',
+        description:
+          'Laravel app to manage students (first name, last name, field of study) with full CRUD operations, built to strengthen my framework fundamentals.',
+      },
+      portfolio: {
+        tag: 'Front-end',
+        title: 'This portfolio',
+        description:
+          'Personal website designed and built from scratch: light and dark themes, bilingual content, animated 3D portrait and attention to accessibility.',
+      },
+    },
+  },
+  education: {
+    eyebrow: 'Education',
+    title: 'Academic background',
+    items: [
+      {
+        key: 'licence',
+        degree: 'Professional Bachelor’s degree in Software Engineering',
+        school: 'ESIG Global Success',
+        location: 'Lomé, Togo',
+        period: '2023 – 2026',
+        text: 'A program focused on application development, completed with an internship at Umbaji and my thesis defense.',
+      },
+      {
+        key: 'biology',
+        degree: 'University studies in Biology & Animal Physiology',
+        school: 'University of Lomé',
+        location: 'Lomé, Togo',
+        period: '2020',
+        text: 'A first scientific background that gave me rigor and analytical thinking.',
+      },
+      {
+        key: 'bac',
+        degree: 'Baccalaureate, Science (Series D)',
+        school: 'Lycée DINO-GOLO',
+        location: 'Togo',
+        period: '2019',
+        text: null,
+      },
+    ],
+  },
 }
 
 export default en
